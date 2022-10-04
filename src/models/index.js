@@ -1,6 +1,7 @@
 const { BelongsTo } = require("sequelize");
 const Departamento = require("./Departamento");
 const Produto = require("./Produto");
+const Cliente = require("./Cliente")
 
 // Produto BelongsTo(Departamento, {
 //     foreignKey: "numero_depto",
@@ -8,5 +9,6 @@ const Produto = require("./Produto");
 
 module.exports = {
     Departamento,
-    Produto
+    Produto,
+    Cliente
 }
