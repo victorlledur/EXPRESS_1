@@ -1,11 +1,12 @@
-const { BelongsTo } = require("sequelize");
 const Departamento = require("./Departamento");
 const Produto = require("./Produto");
 const Cliente = require("./Cliente")
 
-// Produto BelongsTo(Departamento, {
-//     foreignKey: "numero_depto",
-// });
+Produto.hasOne(Departamento, {
+    foreignKey: "numero_depto",
+});
+
+Departamento.hasMany(Produto);
 
 module.exports = {
     Departamento,
